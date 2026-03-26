@@ -29,7 +29,7 @@ No external libraries or frameworks required.
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/quiz-game.git
+   git clone https://github.com/chaitanyaCE/quiz-game.git
    cd quiz-game
    ```
 
