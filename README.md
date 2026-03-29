@@ -1,4 +1,4 @@
-# 🧠 Quiz Time! — Interactive Quiz Game
+# 🧠 Quiz Time! — JS Quiz Engine
 
 A fun, browser-based quiz game built with **Vanilla JavaScript**, **HTML5**, and **CSS3**. Test your programming & tech knowledge across 20 questions, with randomized order every round and a persistent high score.
 
@@ -80,7 +80,7 @@ localStorage.getItem("high-score");              // Retrieve
 No installs. No dependencies. Just clone and open.
 
 ```bash
-git clone https://github.com/chaitanyaCE/Quiz-Game.git
+git clone [https://github.com/chaitanyaCE/Quiz-Game.git](https://chaitanyace.github.io/JS-Quiz-Engine/)
 cd quiz-game
 ```
 
