@@ -1,130 +1,111 @@
-# 🎯 Interactive Quiz Game
+# 🧠 Quiz Time! — Interactive Quiz Game
 
-A simple interactive **Quiz Game** built with **HTML, CSS, and JavaScript** where users answer multiple-choice questions, receive instant feedback, and see a final performance summary at the end of the quiz.[file:19][file:20]
+A fun, browser-based quiz game built with **Vanilla JavaScript**, **HTML5**, and **CSS3**. Test your programming & tech knowledge across 20 questions, with randomized order every round and a persistent high score.
+
+---
+
+## 🚀 Live Demo
+
+> _Open `index.html` in any browser — no setup needed!_
 
 ---
 
 ## ✨ Features
 
-- 🧠 Multiple-choice questions rendered dynamically from a JavaScript question bank.[file:20]  
-- ⚡ Instant feedback with color highlighting for correct ✅ and incorrect ❌ answers.  
-- 📈 Live score tracking as you progress through the quiz.[file:20]  
-- 📊 Progress bar that fills as you move through the questions.[file:20][file:21]  
-- 🏁 Result screen showing final score and a personalized message based on performance (Perfect, Great Job, Keep Learning, etc.).[file:20]  
-- 📱 Responsive, card-style UI centered on the page for a clean and focused quiz experience.[file:19][file:21]
+- 🎲 **Randomized Questions** — 10 questions pulled randomly from a pool of 20 each round
+- 🔀 **Shuffled Answers** — answer order is randomized so you can't memorize positions
+- ✅ **Instant Feedback** — correct/incorrect answers highlighted immediately after selection
+- 📊 **Progress Bar** — tracks how far through the quiz you are
+- 🏆 **High Score Tracking** — saved locally via `localStorage` so it persists between sessions
+- 📱 **Responsive Design** — works on mobile and desktop
+- 🎨 **Clean UI** — warm colour palette with smooth hover and transition effects
 
 ---
 
-## 🛠 Tech Stack
+## 🗂️ Project Structure
 
-- 🧩 **HTML5** – Structure and layout (`index.html`).[file:19]  
-- 🎨 **CSS3** – Styling, layout, and responsive design (`style.css`).[file:21]  
-- 🚀 **Vanilla JavaScript** – Quiz logic, DOM manipulation, scoring, and messaging (`script.js`).[file:20]
-
-No external libraries or frameworks required.
-
----
-
-## 🚀 Getting Started
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/chaitanyaCE/quiz-game.git
-   cd quiz-game
-   ```
-
-2. **Run the game**:
-
-   **Option 1: Open directly**  
-   - Double-click `index.html` and open it in your browser.  
-
-   **Option 2: Use a simple local server (recommended)**  
-   ```bash
-   # Python 3
-   python -m http.server 8000
-   # then visit http://localhost:8000 in your browser
-   ```
-
-That’s it – no build tools, no package installs. 🎉
-
----
-
-## 🎮 How to Play
-
-1. On the **Start Screen**, click **“Start Quiz”** to begin. ▶️[file:19]  
-2. On the **Quiz Screen**:
-   - Read the question at the top.  
-   - Click one of the answer buttons to make your choice.  
-   - Your selected answer is immediately marked as:
-     - ✅ Correct (highlighted in a success color), or  
-     - ❌ Incorrect (highlighted in an error color), while the correct answer is also shown.[file:20][file:21]  
-   - Your **score** and the **progress bar** update as you go.[file:20][file:21]
-
-3. After the last question, the **Result Screen** appears:
-   - You’ll see: **“You scored X out of Y.”**[file:19][file:20]  
-   - A performance message appears, such as:
-     - 🌟 *Perfect! You’re a genius!*  
-     - 💪 *Great Job! You know your stuff!*  
-     - 📚 *Keep Studying! You’ll get better!*[file:20]
-
-4. Click **“Restart Quiz”** 🔄 to play again from the beginning.[file:19][file:20]
-
----
-
-## 🧱 Project Structure
-
-```text
-.
-├── index.html   # Main page: start, quiz, and result screens
-├── style.css    # Styling for layout, buttons, progress bar, and responsiveness
-└── script.js    # Quiz logic: questions, scoring, progress, and result messages
+```
+quiz-game/
+├── index.html      # Main HTML structure (3 screens: Start, Quiz, Results)
+├── style.css       # Styling, responsive layout, colour themes
+└── script.js       # All game logic — shuffling, scoring, state management
 ```
 
-- `index.html` defines three main screens:  
-  - `#start-screen` – Intro and **Start Quiz** button  
-  - `#quiz-screen` – Question text, answers, score, progress bar  
-  - `#result-screen` – Final score and performance message, restart button[file:19]  
+---
 
-- `style.css` includes:  
-  - Centered card-style layout  
-  - Button hover states  
-  - Correct/incorrect answer color states  
-  - Responsive tweaks for smaller screens[file:21]  
+## 🛠️ Built With
 
-- `script.js` handles:  
-  - `quizQuestions` array (questions + answers + `isCorrect` flags)  
-  - Quiz state (`currentQuestionIndex`, `score`)  
-  - Functions to start the quiz, render questions, handle answer selection, update progress, and show results.[file:20]
+| Technology | Purpose |
+|---|---|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Page structure & screen layout |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Styling, animations, responsive design |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Game logic, DOM manipulation, localStorage |
 
 ---
 
-## 🎨 Customization
+## ⚙️ How It Works
 
-You can easily make the quiz your own:
-
-- ✏️ **Edit Questions**  
-  - Modify the `quizQuestions` array in `script.js` to change question text, options, and which answer is correct.[file:20]
-
-- 🎭 **Change Styling / Theme**  
-  - Update colors, fonts, border radius, and spacing in `style.css` for a new look (e.g., dark mode, brand colors, etc.).[file:21]
-
-- 💬 **Adjust Result Messages**  
-  - In `showResult` (inside `script.js`), adjust the score thresholds and messages to match your tone and difficulty.[file:20]
+1. **Start** — Click _Start Quiz_ to kick off a randomized 10-question round
+2. **Answer** — Pick from 4 options; the correct answer highlights green, wrong ones highlight red
+3. **Progress** — Watch the bar fill as you move through questions
+4. **Results** — See your score, a performance message, and your all-time high score
+5. **Restart** — Jump straight back in with a freshly shuffled set
 
 ---
 
-## 🔮 Future Improvements
+## 📋 Question Topics
 
-Ideas to extend this project:
+The question bank covers a range of beginner-to-intermediate tech topics:
 
-- ⏱ Add a countdown timer per question or for the entire quiz.  
-- 📂 Add categories (e.g., General Knowledge, Programming, History).  
-- 🏆 Save and display high scores using `localStorage`.  
-- 📊 Show a review screen listing which questions were answered incorrectly.
+- 🖥️ Programming fundamentals (variables, booleans, algorithms, debugging)
+- 🌐 Web development (HTML, CSS, JavaScript, HTTP status codes)
+- 🔧 Software concepts (APIs, servers, databases, version control, deployment)
+- 📖 General tech knowledge (open-source, UI/UX, README files)
 
 ---
 
-## 📜 License
+## 💾 High Score Persistence
 
-This project is currently unlicensed.  
-You can add an open-source license (for example, **MIT License**) by creating a `LICENSE` file and updating this section accordingly.
+High scores are saved using the browser's `localStorage` — so even after closing the tab, your best score sticks around.
+
+```javascript
+localStorage.setItem("high-score", highScore);  // Save
+localStorage.getItem("high-score");              // Retrieve
+```
+
+---
+
+## 🏃 Getting Started
+
+No installs. No dependencies. Just clone and open.
+
+```bash
+git clone https://github.com/chaitanyaCE/Quiz-Game.git
+cd quiz-game
+```
+
+Then open `index.html` in your browser — that's it!
+
+---
+
+## 🔮 Possible Future Improvements
+
+- [ ] Timer per question ⏱️
+- [ ] Category filtering 🗂️
+- [ ] Difficulty levels 🎯
+- [ ] Sound effects 🔊
+- [ ] Leaderboard with player names 🏅
+
+---
+
+## 👤 Author
+
+**Chaitanya**
+- 🔗 [LinkedIn]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/chaitanya-patel-uwaterloo/))
+- 🐙 [GitHub](https://github.com/chaitanyaCE)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
